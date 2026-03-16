@@ -22,6 +22,6 @@
     "strictBindCallApply": false,
     "noFallthroughCasesInSwitch": false,
     "strictPropertyInitialization": false, //Editado
-    "types": ["node", "jest"] //Editado
+    "types": ["node", "jest"], //Editado
   }
 }
