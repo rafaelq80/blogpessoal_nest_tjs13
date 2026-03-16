@@ -30,13 +30,13 @@ export class Postagem {
     @UpdateDateColumn() // Atualiza a data na criação e na atualização
     data: Date; // DATETIME(6)
 
-    @ApiProperty() 
+    @ApiProperty({ type: () => Tema }) 
     @ManyToOne( () => Tema, (tema) => tema.postagem, {
         onDelete: "CASCADE"
     })
     tema: Tema; // Representa a Chave Estrangeira
 
-    @ApiProperty() 
+    @ApiProperty({ type: () => Usuario }) 
     @ManyToOne( () => Usuario, (usuario) => usuario.postagem, {
         onDelete: "CASCADE"
     })
